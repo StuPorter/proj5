@@ -32,7 +32,10 @@ class UsersController < ApplicationController
       else 
          # Create new user
         password = BCrypt::Password.create(params["password"])
-        user = User.create username: params["username"], password: password, fullname: params["fullname"], email: params["email"], coursehome: params["coursehome"], img: params["img"]
+        p '-----------------------------------------'
+        p params
+        p '-----------------------------------------'
+        user = User.create username: params["username"], password: password, fullname: params["fullname"], email: params["email"], homecourse: params["homecourse"], img: params["img"]
         if user 
           # if user created, save user to session, render the profile page
           session[:is_logged_in] = true

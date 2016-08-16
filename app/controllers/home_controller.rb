@@ -39,21 +39,15 @@ class HomeController < ApplicationController
       end
 
     else
-      @page_title = "myStreet - Home Page"
+      @page_title = "Divot - Home Page"
       @message = "Wrong username"
       erb :home
     end
   end
 
-
-
-
-
-
-
-
-
-
+ get '/scores' do
+    @page_title = "Divot - User score history"
+  end
 
 end
 

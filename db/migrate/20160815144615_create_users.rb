@@ -5,9 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :fullname
       t.string :email
-      t.string :coursehome
+      t.string :homecourse
       t.string :img
     end
   end
 end
-
